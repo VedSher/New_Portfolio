@@ -1,0 +1,110 @@
+.Nav {
+    height: 80px;
+    width: 100%;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12%;
+}
+
+.navbarScroll{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 5px 10px var(--nav-text-bg);
+}
+
+.Nav .logo a {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffc94b;
+}
+
+.NavBtns {
+    display: flex;
+    gap: 8px;
+}
+
+.NavBtns i {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffc94b;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.NavBtns i:nth-child(2) {
+    display: none;
+}
+
+.Nav ul li {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.Nav ul li a, .Nav i {
+    border-radius: 13%;
+    color: var(--text-color);
+}
+
+.Nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    background-color: var(--nav-text-bg);
+    transition: background-color .6s;
+}
+
+.Nav ul li:hover a {
+    background-color: var(--primary-color);
+}
+
+@media  screen and (max-width:1400px) {
+    .Nav ul li a{
+        padding: 4px 8px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .NavBtns i:nth-child(2) {
+        display: flex;
+    }
+
+    .Nav {
+        position: relative;
+    }
+
+    .Nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        overflow: hidden;
+        transition: height .6s ease;
+        height: 0; /* Ensure hidden by default */
+    }
+
+    .Nav ul li {
+        display: block;
+        margin: 8px 0;
+        padding: 20px 0;
+        padding-left: 12%;
+        width: 90%;
+    }
+
+    .Nav ul li a {
+        border-radius: 3%;
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+
+    .Nav .activeNav {
+        height: 85vh;
+    }
+}

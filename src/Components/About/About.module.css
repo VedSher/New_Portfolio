@@ -1,0 +1,182 @@
+.AboutWrapper{
+    flex-direction: row !important;
+}
+
+.aboutContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutContainer h2{
+    font-size: 38px;
+    color: var(--text-color);
+}
+
+.aboutContainer p{
+    font-size: 14px;
+    color: var(--pera-color);
+}
+
+.aboutContainer h2:nth-of-type(1){
+    font-size: 5vw;
+}
+
+.skillWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.skillWrapper .skill{
+    display: flex;
+    flex-direction: column;
+    transition: .6s;
+    width: 100%;
+    gap: 5px;
+}
+
+.skillWrapper .skill h3{
+    color: var(--text-color);
+    font-size: 22px;
+}
+
+.skillWrapper .skill .line{
+    height: 20px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    position: relative;
+    transition: .6s;
+}
+
+.skillWrapper .skill:hover .line:hover{
+    box-shadow: 0 0 50px var(--primary-color);
+}
+
+.skillWrapper .skill .line::after{
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 0.5%;
+    width: 80%;
+    height: 60%;
+    background-color: var(--Light-color);
+}
+
+.skillWrapper .skill:nth-of-type(2) .line::after{width: 89%;}
+.skillWrapper .skill:nth-of-type(3) .line::after{width: 82%;}
+.skillWrapper .skill:nth-of-type(4) .line::after{width: 68%;}
+.skillWrapper .skill:nth-of-type(5) .line::after{width: 70%;}
+.skillWrapper .skill:nth-of-type(6) .line::after{width: 68%;}
+
+.AboutImg{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.AboutWrapper img{
+    height: auto;
+    width: 450px;
+}
+
+.AboutImg .Exp{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -130%;
+    left: 50vw;
+    background-color: var(--Light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-25deg);
+    box-shadow: 0 0 50px var(--primary-color);
+}
+
+.AboutImg .Exp h2{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 25px;
+    line-height: 50px;
+}
+.AboutImg .Exp span{
+    display: block;
+    font-size: 60px;    
+}
+
+@media screen and (max-width:1400px) {
+    .AboutImg img{
+        width: 85%;
+    }
+
+    .AboutImg .Exp{
+        position: absolute;
+        bottom: -150vh;
+    }
+
+}
+
+@media screen and (max-width:1100px){
+    .AboutWrapper{
+        flex-direction: column-reverse !important;
+    }
+
+    .aboutContainer{
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .AboutImg{
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .AboutImg img{
+        width: 85%;
+    }
+
+    .AboutImg .Exp{
+        position: absolute;
+        bottom: -150vh;
+        left: 4vw;
+    }
+
+}
+
+@media screen and (max-width:900px){
+    .AboutImg img{
+        width: 100%;
+    }
+
+    .AboutImg .Exp{
+        height: 25vh;
+        width: 25vh;
+        bottom: -170vw;
+    }
+    .AboutImg .Exp h2{
+        font-size: 3vh;
+        line-height: 5vh;
+    }
+    .AboutImg .Exp span{
+        display: block;
+        font-size: 7vw;    
+    }
+}
+
+@media screen and (max-width:768px){
+    .AboutImg .Exp{
+        height: 150px;
+        width: 150px;
+        bottom: -170vw;
+    }
+    .AboutImg .Exp h2{
+        font-size: 15px;
+        line-height: 35px;
+    }
+}

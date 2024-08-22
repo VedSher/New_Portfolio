@@ -1,0 +1,107 @@
+.ContactWrapper{
+    gap: 18px;
+    color: var(--text-color);
+}
+
+.ContactWrapper .pera{
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.ContactWrapper h2{
+    font-size: 38px;
+    line-height: 30px;
+}
+
+.ContactContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.ContactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.Contactform{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 30px;
+    background-color: var(--bg-color);
+}
+
+.Contactform h3{
+    font-size: 28px;
+}
+
+.Contactform .inputWrapper{
+    min-height: 48px;
+    width: 100%;
+}
+
+.Contactform .inputWrapper input , textarea{
+    width: 100%;
+    height: 100%;
+    padding: 0 14px;
+    outline: none;
+    border: none;
+}
+
+textarea{
+    height: 140px;
+    margin-bottom: 12px;
+}
+
+.Contactform button{
+    font-weight: 500;
+}
+
+.ContactInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ContactInfo .card{
+    padding: 20px 30px;
+    background-color: var(--bg-color);
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.ContactInfo .card i{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.ContactInfo .card h3{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+@media  screen and (max-width:900px) {
+    .ContactContainer{
+        flex-direction: column;
+    }
+
+    .ContactInfo , .Contactform{
+        width: 100%;
+    }
+
+    .Contactform .inputWrapper input{
+        height: 48px;
+    }
+
+    .ContactWrapper .pera{
+        width: 100%;
+        /* margin-bottom: 30px; */
+    }
+}

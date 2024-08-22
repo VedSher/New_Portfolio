@@ -1,0 +1,67 @@
+.swiper{
+    width: 100% !important;
+}
+
+.portfolioWrapper{
+    gap: 20px;
+    color: var(--text-color);
+}
+
+.portfolioWrapper .pera{
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.portfolioWrapper h2{
+    font-size: 38px;
+    line-height: 30px;
+}
+
+.Card{
+    height: 380px;
+    width: 380px;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    position: relative;
+}
+
+.Card .content{
+    position: absolute;
+    bottom: -50%;
+    left: 20px;
+    color: var(--white-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: var(--bg-card);
+    border: 0.5px solid var(--white-color);
+    transition: .6s;
+}
+
+.Card:hover .content{
+    bottom: 20px;
+}
+
+.Card .content h3{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.Card1{
+    background-image: url(./../../assets/1.jpg);
+}
+.Card2{
+    background-image: url(./../../assets/2.jpg);
+}
+.Card3{
+    background-image: url(./../../assets/3.jpeg);
+}
+.Card4{
+    background-image: url(./../../assets/4.jpg);
+}
+
+@media screen and (max-width:768px){
+    .portfolioWrapper .pera{
+        width: 100%;
+    }
+}

@@ -60,7 +60,7 @@ const Navbar = () => {
           ))}
           <li>
             <a
-              href='https://drive.google.com/uc?export=download&id=1USFl8hecTX7A9OMSKAh1B4yhtTPaQdlG'
+              href='https://drive.google.com/uc?id=1bi3ugIokSQtqILGr1jqQFEv6ujCJ5ieO&export=download'
               download
               className='text-[18px] font-medium text-secondary hover:text-white'
             >

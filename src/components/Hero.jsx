@@ -31,7 +31,7 @@ const Hero = () => {
           className='mt-3 text-secondary text-[37px] max-w-5xl leading-[50px]'
         >
           find me on
-          <div class="social-media" className="flex gap-[500px] mt-[150px]">
+          <div class="social-media" className="flex gap-[400px] mt-[150px]">
                 <a href="https://www.linkedin.com/in/vaidik-shreshth/" className="text-[100px]"><i class="fa-brands fa-linkedin"></i></a>
                 {/* <a href=""><i class="fa-brands fa-facebook"></i></a> */}
                 <a href="https://x.com/vaidikshreshth_" className="text-[100px]"><i class="fa-brands fa-x-twitter"></i></a>

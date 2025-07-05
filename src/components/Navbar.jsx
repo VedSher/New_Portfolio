@@ -25,6 +25,42 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Function to handle smooth scrolling to sections
+  const handleNavClick = (navId, navTitle) => {
+    setActive(navTitle);
+    // Remove the # if it exists in navId
+    const elementId = navId.replace('#', '');
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  // Function to handle resume download
+  const handleResumeDownload = () => {
+    // Using the direct download URL format for Google Drive
+    const downloadUrl = 'https://drive.google.com/file/d/16QjUJHc5dbl3RrtRF04opwkt3sv7IJRB/view?usp=sharing';
+    
+    try {
+      // Method 1: Direct window.open
+      window.open(downloadUrl, '_blank');
+      
+      // Method 2: Fallback with link creation
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.target = '_blank';
+      link.download = 'Vaidik_Shreshth_Resume.pdf';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback: open in new tab
+      window.open(downloadUrl, '_blank');
+    }
+  };
+
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
@@ -53,19 +89,25 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
             >
-              <Link to={nav.id}>{nav.title}</Link>
+              <a 
+                href={`#${nav.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(nav.id, nav.title);
+                }}
+              >
+                {nav.title}
+              </a>
             </li>
           ))}
           <li>
-            <a
-              href='https://drive.google.com/uc?id=1bi3ugIokSQtqILGr1jqQFEv6ujCJ5ieO&export=download'
-              download
-              className='text-[18px] font-medium text-secondary hover:text-white'
+            <button
+              onClick={handleResumeDownload}
+              className='text-[18px] font-medium text-secondary hover:text-white cursor-pointer bg-transparent border-none outline-none'
             >
               Resume
-            </a>
+            </button>
           </li>
         </ul>
 
@@ -73,7 +115,7 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
 
@@ -89,22 +131,29 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
                 >
-                  <Link to={nav.id}>{nav.title}</Link>
+                  <a 
+                    href={`#${nav.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setToggle(!toggle);
+                      handleNavClick(nav.id, nav.title);
+                    }}
+                  >
+                    {nav.title}
+                  </a>
                 </li>
               ))}
               <li>
-                <a
-                  href='https://drive.google.com/uc?export=download&id=1USFl8hecTX7A9OMSKAh1B4yhtTPaQdlG'
-                  download
-                  className='font-poppins font-medium text-[16px] text-secondary hover:text-white'
+                <button
+                  onClick={() => {
+                    setToggle(!toggle);
+                    handleResumeDownload();
+                  }}
+                  className='font-poppins font-medium text-[16px] text-secondary hover:text-white cursor-pointer bg-transparent border-none outline-none'
                 >
                   Resume
-                </a>
+                </button>
               </li>
             </ul>
           </div>

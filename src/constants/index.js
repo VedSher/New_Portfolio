@@ -129,7 +129,7 @@ const experiences = [
     "Developed an AI agent using Gemini API to analyze business models and suggest actionable improvements, including tailored marketing strategies.",
     "Delivered improvements to platform performance and functionality.",
   ],
-}
+},
   {
     title: "Web Developer Intern",
     company_name: "Alesa Ai Ltd",

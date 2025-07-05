@@ -39,7 +39,7 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
-  },
+  }
 ];
 
 const services = [
@@ -117,6 +117,19 @@ const technologies = [
 ];
 
 const experiences = [
+{
+  title: "Full Stack Developer Intern",
+  company_name: "Bizowl",
+  icon: tesla,
+  iconBg: "#383E56",
+  date: "February 2025 - March 2025",
+  points: [
+    "Built scalable React.js and Node.js-based platform with Firebase backend.",
+    "Made AI Agents for giving advice.",
+    "Developed an AI agent using Gemini API to analyze business models and suggest actionable improvements, including tailored marketing strategies.",
+    "Delivered improvements to platform performance and functionality.",
+  ],
+}
   {
     title: "Web Developer Intern",
     company_name: "Alesa Ai Ltd",
@@ -143,9 +156,38 @@ const experiences = [
 
 const projects = [
   {
+    name: "Prepwise – AI Interview Platform",
+    description:
+      "AI-driven mock interview platform using Gemini API and Vapi to simulate real-time interview scenarios. Features personalized feedback and voice-based Q&A sessions.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Zod",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "shadcn/ui",
+        color: "green-text-gradient",
+      },
+    ],
+    image: "/prepwise.png",
+    source_code_link: "https://github.com/VedSher/Prepwise",
+  },
+  {
     name: "Task-Man",
     description:
-      "A Full Stack MERN Project-a complete task manager application with authentication using the MERN Stack. We will be using MongoDB, Express, React, and Node.js.",
+      "A Full Stack MERN Project—a complete task manager application with authentication using the MERN Stack. We will be using MongoDB, Express, React, and Node.js.",
     tags: [
       {
         name: "Next.js",
@@ -206,5 +248,6 @@ const projects = [
     source_code_link: "https://github.com/VedSher/Studyhive",
   },
 ];
+
 
 export { services, technologies, experiences, projects };

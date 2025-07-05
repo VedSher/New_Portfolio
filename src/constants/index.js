@@ -117,23 +117,23 @@ const technologies = [
 ];
 
 const experiences = [
-{
-  title: "Full Stack Developer Intern",
-  company_name: "Bizowl",
-  icon: tesla,
-  iconBg: "#383E56",
-  date: "February 2025 - March 2025",
-  points: [
-    "Built scalable React.js and Node.js-based platform with Firebase backend.",
-    "Made AI Agents for giving advice.",
-    "Developed an AI agent using Gemini API to analyze business models and suggest actionable improvements, including tailored marketing strategies.",
-    "Delivered improvements to platform performance and functionality.",
-  ],
+  {
+    title: "Full Stack Developer Intern",
+    company_name: "Bizowl",
+    icon: starbucks,
+    iconBg: "#E6DEDD",
+    date: "February 2025 - March 2025",
+    points: [
+      "Built scalable React.js and Node.js-based platform with Firebase backend.",
+      "Made AI Agents for giving advice.",
+      "Developed an AI agent using Gemini API to analyze business models and suggest actionable improvements, including tailored marketing strategies.",
+      "Delivered improvements to platform performance and functionality.",
+    ],
 },
   {
     title: "Web Developer Intern",
     company_name: "Alesa Ai Ltd",
-    icon: starbucks,
+    icon: tesla,
     iconBg: "#383E56",
     date: "September 2024 - December 2024",
     points: [
@@ -144,7 +144,7 @@ const experiences = [
   {
     title: "Summer Intern",
     company_name: "Tata Steel",
-    icon: tesla,
+    icon: shopify,
     iconBg: "#E6DEDD",
     date: "May 2024 - June 2024",
     points: [
@@ -156,7 +156,7 @@ const experiences = [
 
 const projects = [
   {
-    name: "Prepwise – AI Interview Platform",
+    name: "Prepwise - AI Interview Platform",
     description:
       "AI-driven mock interview platform using Gemini API and Vapi to simulate real-time interview scenarios. Features personalized feedback and voice-based Q&A sessions.",
     tags: [
